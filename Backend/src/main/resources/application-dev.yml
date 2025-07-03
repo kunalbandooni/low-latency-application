@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      uri: "mongodb://localhost:27017/trading"
+    redis:
+      host: localhost
+      port: 6379
+
+
+cors:
+  allowed:
+    origin: "http://localhost:3000"

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: "Low-Latency-Application"
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /
