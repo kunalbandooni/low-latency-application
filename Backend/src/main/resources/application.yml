@@ -10,3 +10,7 @@ server:
 springdoc:
   swagger-ui:
     path: /
+
+kafka:
+  topic:
+    trade: trades
