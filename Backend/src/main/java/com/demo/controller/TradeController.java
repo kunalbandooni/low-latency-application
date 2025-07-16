@@ -18,7 +18,7 @@ public class TradeController {
 
     @PostMapping
     public Trade save(@RequestBody Trade trade) {
-        return service.save(trade);
+        return service.publishToSave(trade);
     }
 
     @GetMapping
@@ -30,10 +30,7 @@ public class TradeController {
 
     @GetMapping("/{id}")
     public Trade getById(@PathVariable String id) {
-        long startTime = System.currentTimeMillis();
         Trade trade = service.findById(id);
-        long endTime = System.currentTimeMillis();
-        log.info("Time taken: {}", endTime - startTime);
         return trade;
     }
 

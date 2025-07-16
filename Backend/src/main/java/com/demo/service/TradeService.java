@@ -6,7 +6,7 @@ import org.springframework.data.domain.Pageable;
 
 public interface TradeService {
     Trade save(Trade trade);
-    void publishToSave(Trade trade);
+    Trade publishToSave(Trade trade);
     Page<Trade> findAll(Pageable pageable);
     Trade findById(String id);
     void delete(String id);

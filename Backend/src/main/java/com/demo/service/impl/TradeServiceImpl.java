@@ -38,13 +38,14 @@ public class TradeServiceImpl implements TradeService {
     }
 
     @Override
-    public void publishToSave(Trade trade) {
+    public Trade publishToSave(Trade trade) {
         try {
             String json = objectMapper.writeValueAsString(trade);
             kafkaProducer.send(tradeTopicName, json);
         } catch (Exception e) {
             log.error("Unable to convert data into string, Exception: {}", e.getMessage());
         }
+        return trade;
     }
 
     @Override
