@@ -1,5 +1,4 @@
-
-
+## Basic Architecture for the application
 
             [ Client (REST / WebSocket) ]
                          ⬇

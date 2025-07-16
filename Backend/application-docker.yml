@@ -1,7 +1,13 @@
 spring:
-  kafka:
-    bootstrap-servers: kafka:9092
   data:
+    mongodb:
+      host: mongodb
+      port: 27017
+      database: trades
+
     redis:
       host: redis
       port: 6379
+
+  kafka:
+    bootstrap-servers: kafka:9092
